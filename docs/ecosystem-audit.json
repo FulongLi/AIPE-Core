@@ -1,0 +1,509 @@
+{
+  "schema_version": "0.1.0",
+  "checked_on": "2026-10-07",
+  "canonical": [
+    {
+      "repository": "FulongLi/AIPE-Core",
+      "inspected_revision": null,
+      "current_purpose": "Empty",
+      "target_purpose": "Shared engineering schemas and contracts",
+      "type": "standard",
+      "canonical_status": "canonical",
+      "inputs": [],
+      "outputs": [],
+      "dependencies": "none",
+      "existing_schemas": [],
+      "existing_apis": [],
+      "existing_tools": [],
+      "existing_ai_instructions": [],
+      "license": "NOASSERTION",
+      "maturity": "new",
+      "duplicate_functionality": "Legacy device libraries and agent device/magnetics estimates require explicit boundaries; no automatic merge",
+      "old_branding": "none identified at repository title",
+      "migration_risks": "Empty upstream cannot be forked; initial baseline needs maintainer"
+    },
+    {
+      "repository": "FulongLi/AIPE-Registry",
+      "inspected_revision": null,
+      "current_purpose": "Empty",
+      "target_purpose": "Machine-readable capability registry",
+      "type": "registry",
+      "canonical_status": "canonical",
+      "inputs": [],
+      "outputs": [],
+      "dependencies": "none",
+      "existing_schemas": [],
+      "existing_apis": [],
+      "existing_tools": [],
+      "existing_ai_instructions": [],
+      "license": "NOASSERTION",
+      "maturity": "new",
+      "duplicate_functionality": "Legacy device libraries and agent device/magnetics estimates require explicit boundaries; no automatic merge",
+      "old_branding": "none identified at repository title",
+      "migration_risks": "Empty upstream cannot be forked; initial baseline needs maintainer"
+    },
+    {
+      "repository": "FulongLi/AIPE-Semiconductor-Database",
+      "inspected_revision": "4cc1853549b0c333b0de05f110914ae10bf3d0d2",
+      "current_purpose": "Pydantic v3 device/evidence infrastructure",
+      "target_purpose": "Canonical semiconductor database with Core mapping",
+      "type": "database",
+      "canonical_status": "canonical",
+      "inputs": [
+        "manufacturer XML",
+        "measurement packages"
+      ],
+      "outputs": [
+        "canonical v3 records",
+        "PLECS/MATLAB exports"
+      ],
+      "dependencies": "Pydantic; optional SciPy",
+      "existing_schemas": [
+        "docs/schemas/coverage-gap-report.schema.json",
+        "docs/schemas/device.schema.json",
+        "docs/schemas/import-report.schema.json",
+        "docs/schemas/import-session.schema.json",
+        "docs/schemas/measurement-package.schema.json",
+        "docs/schemas/measurement-request.schema.json",
+        "docs/schemas/visualization-spec.schema.json",
+        "src/aipe_devices/schema/__init__.py",
+        "src/aipe_devices/schema/enums.py",
+        "src/aipe_devices/schema/validation.py",
+        "src/aipe_devices/schema/versions.py"
+      ],
+      "existing_apis": [
+        "src/aipe_devices/__init__.py",
+        "src/aipe_devices/cli.py",
+        "src/aipe_devices/domain/__init__.py",
+        "src/aipe_devices/exporters/__init__.py",
+        "src/aipe_devices/exporters/json/__init__.py",
+        "src/aipe_devices/exporters/matlab/__init__.py",
+        "src/aipe_devices/exporters/plecs/__init__.py",
+        "src/aipe_devices/importers/__init__.py",
+        "src/aipe_devices/importers/datasheet/__init__.py",
+        "src/aipe_devices/importers/legacy/__init__.py",
+        "src/aipe_devices/importers/library/__init__.py",
+        "src/aipe_devices/importers/measurement/__init__.py",
+        "src/aipe_devices/importers/plecs/__init__.py",
+        "src/aipe_devices/importers/spice/__init__.py",
+        "src/aipe_devices/measurement/__init__.py",
+        "src/aipe_devices/migration/__init__.py",
+        "src/aipe_devices/normalizers/__init__.py",
+        "src/aipe_devices/repository/__init__.py",
+        "src/aipe_devices/schema/__init__.py",
+        "src/aipe_devices/services/__init__.py",
+        "src/aipe_devices/services/comparison/__init__.py",
+        "src/aipe_devices/services/coverage/__init__.py",
+        "src/aipe_devices/services/fitting/__init__.py",
+        "src/aipe_devices/services/interpolation/__init__.py",
+        "src/aipe_devices/services/loss/__init__.py",
+        "src/aipe_devices/services/thermal/__init__.py",
+        "src/aipe_devices/services/validation/__init__.py",
+        "src/aipe_devices/storage/__init__.py",
+        "src/aipe_devices/visualization/__init__.py"
+      ],
+      "existing_tools": [
+        "scripts/generate_examples.py",
+        "scripts/generate_phase2_examples.py"
+      ],
+      "existing_ai_instructions": [],
+      "license": "NOASSERTION",
+      "maturity": "usable",
+      "duplicate_functionality": "Legacy device libraries and agent device/magnetics estimates require explicit boundaries; no automatic merge",
+      "old_branding": "AIPE Transistor Database",
+      "migration_risks": "Raw manufacturer rights; preserve v3 identifiers and evidence"
+    },
+    {
+      "repository": "FulongLi/AIPE-Magnetics-Database",
+      "inspected_revision": "af9c7e5f20ad318060c057c7ed5f78a018138d7f",
+      "current_purpose": "One-line Rogowski_Coil README",
+      "target_purpose": "Evidence-first magnetics database scaffold",
+      "type": "database",
+      "canonical_status": "canonical",
+      "inputs": [
+        "source material and measurements"
+      ],
+      "outputs": [
+        "canonical magnetic records"
+      ],
+      "dependencies": "none",
+      "existing_schemas": [],
+      "existing_apis": [],
+      "existing_tools": [],
+      "existing_ai_instructions": [],
+      "license": "NOASSERTION",
+      "maturity": "scaffold",
+      "duplicate_functionality": "Legacy device libraries and agent device/magnetics estimates require explicit boundaries; no automatic merge",
+      "old_branding": "Rogowski_Coil-",
+      "migration_risks": "No real corpus; do not fabricate material/loss measurements"
+    },
+    {
+      "repository": "FulongLi/AIPE-Simulation-Skills",
+      "inspected_revision": "ff1cab182a48fb50fcfe047e1bf7576fe14031b6",
+      "current_purpose": "Eight commercial/free proprietary workflows",
+      "target_purpose": "Open-source-first workflow collection",
+      "type": "skill_collection",
+      "canonical_status": "canonical",
+      "inputs": [
+        "requirements",
+        "models",
+        "waveforms"
+      ],
+      "outputs": [
+        "reviewed simulation workflow and evidence"
+      ],
+      "dependencies": "Tool-specific external software",
+      "existing_schemas": [],
+      "existing_apis": [],
+      "existing_tools": [
+        "scripts/update_readme.py",
+        "scripts/validate_skills.py"
+      ],
+      "existing_ai_instructions": [
+        "pe-ansys-electromagnetic-thermal/SKILL.md",
+        "pe-comsol-electromagnetic-thermal/SKILL.md",
+        "pe-control-loop-debug/SKILL.md",
+        "pe-dsp-fpga-control-debug/SKILL.md",
+        "pe-ltspice-power-electronics/SKILL.md",
+        "pe-plecs-power-electronics/SKILL.md",
+        "pe-simetrix-simplis-power-electronics/SKILL.md",
+        "pe-simulink-power-electronics/SKILL.md"
+      ],
+      "license": "NOASSERTION",
+      "maturity": "usable instructions",
+      "duplicate_functionality": "Legacy device libraries and agent device/magnetics estimates require explicit boundaries; no automatic merge",
+      "old_branding": "Spirit Connect Giants Skills PE",
+      "migration_risks": "Preserve existing workflows; README generated by script"
+    },
+    {
+      "repository": "FulongLi/AIPE-Sketch",
+      "inspected_revision": "d1961eba8ff99631b3ae8d1f7b9f759775d5582e",
+      "current_purpose": "Circuit IR to deterministic schematic SVG",
+      "target_purpose": "Tool with Engineering State/Circuit IR mapping",
+      "type": "tool",
+      "canonical_status": "canonical",
+      "inputs": [
+        "Netlist",
+        "master symbol SVG"
+      ],
+      "outputs": [
+        "schematic SVG",
+        "connectivity checks"
+      ],
+      "dependencies": "Python standard library",
+      "existing_schemas": [],
+      "existing_apis": [
+        "aipe_sketch/__init__.py"
+      ],
+      "existing_tools": [
+        "tools/catalog.py",
+        "tools/compare_plans.py",
+        "tools/export_symbols.py",
+        "tools/extract_library.py",
+        "tools/inspect_symbol.py"
+      ],
+      "existing_ai_instructions": [],
+      "license": "NOASSERTION",
+      "maturity": "usable",
+      "duplicate_functionality": "Legacy device libraries and agent device/magnetics estimates require explicit boundaries; no automatic merge",
+      "old_branding": "none identified at repository title",
+      "migration_risks": "Do not rewrite planner or assume topology implies a complete netlist"
+    },
+    {
+      "repository": "FulongLi/AIPE-Design-Agent",
+      "inspected_revision": "139484943f6a1eca05e06b8775680309e9c3aa64",
+      "current_purpose": "PEA calculators, optimiser, CLI/UI",
+      "target_purpose": "Incremental chief-architect orchestration",
+      "type": "agent",
+      "canonical_status": "canonical",
+      "inputs": [
+        "converter specifications"
+      ],
+      "outputs": [
+        "analytical designs",
+        "candidate estimates"
+      ],
+      "dependencies": "Python; LangChain; Streamlit; optional pymoo/CadQuery",
+      "existing_schemas": [
+        "pea/components/schema.py"
+      ],
+      "existing_apis": [
+        "pea/__init__.py",
+        "pea/agent/__init__.py",
+        "pea/cli.py",
+        "pea/components/__init__.py",
+        "pea/knowledge/__init__.py",
+        "pea/tools/__init__.py",
+        "tests/__init__.py"
+      ],
+      "existing_tools": [
+        "scripts/agent_smoke_test.py",
+        "scripts/extract_pdf.py",
+        "scripts/spice_to_json.py"
+      ],
+      "existing_ai_instructions": [],
+      "license": "MIT",
+      "maturity": "prototype",
+      "duplicate_functionality": "Legacy device libraries and agent device/magnetics estimates require explicit boundaries; no automatic merge",
+      "old_branding": "PEA",
+      "migration_risks": "Legacy kHz conventions; estimates are not measurements"
+    },
+    {
+      "repository": "FulongLi/AIPE-Academy",
+      "inspected_revision": "5237470af4b8480286ecf8a31d476238dffb5df5",
+      "current_purpose": "Seven curriculum stages and F00-F09 bridge",
+      "target_purpose": "Extensible education source of truth",
+      "type": "education",
+      "canonical_status": "canonical",
+      "inputs": [
+        "learner evidence",
+        "academic references"
+      ],
+      "outputs": [
+        "lessons",
+        "prerequisite map",
+        "lab exercises"
+      ],
+      "dependencies": "None for existing lessons",
+      "existing_schemas": [],
+      "existing_apis": [],
+      "existing_tools": [],
+      "existing_ai_instructions": [
+        "AGENTS.md"
+      ],
+      "license": "CC-BY-4.0",
+      "maturity": "one usable beginner lesson plus outlines",
+      "duplicate_functionality": "Legacy device libraries and agent device/magnetics estimates require explicit boundaries; no automatic merge",
+      "old_branding": "none identified at repository title",
+      "migration_risks": "Retain curriculum; original content; public lessons must distinguish outlines"
+    },
+    {
+      "repository": "FulongLi/AIPE-IEEE-Paper-Agent",
+      "inspected_revision": "80284dc479512fcdcc515d44e0e61b8ccb0e4276",
+      "current_purpose": "Evidence-driven manuscript engine and venue profiles",
+      "target_purpose": "Research agent capability metadata",
+      "type": "agent",
+      "canonical_status": "canonical",
+      "inputs": [
+        "research questions",
+        "evidence",
+        "venue profile"
+      ],
+      "outputs": [
+        "paper plan",
+        "LaTeX workspace",
+        "citation audits"
+      ],
+      "dependencies": "Python 3.10; optional TeX",
+      "existing_schemas": [],
+      "existing_apis": [],
+      "existing_tools": [
+        "scripts/build-reference-index.py",
+        "scripts/check-citations.py",
+        "scripts/check-latex.py",
+        "scripts/create-manuscript.py",
+        "scripts/package-release.py",
+        "scripts/venue_profiles.py"
+      ],
+      "existing_ai_instructions": [
+        "AGENTS.md",
+        "core/SKILL.md"
+      ],
+      "license": "NOASSERTION",
+      "maturity": "usable workflow",
+      "duplicate_functionality": "Legacy device libraries and agent device/magnetics estimates require explicit boundaries; no automatic merge",
+      "old_branding": "none identified at repository title",
+      "migration_risks": "Preserve official templates; books/local caches cannot be published"
+    },
+    {
+      "repository": "FulongLi/Spirit-Connect-AIPE-Labs",
+      "inspected_revision": "267393d3a786a76dc859a1e292f357a57e52781d",
+      "current_purpose": "Jekyll website and manually curated aipe.md",
+      "target_purpose": "Build-time Registry and Academy presentation",
+      "type": "presentation",
+      "canonical_status": "canonical",
+      "inputs": [
+        "posts",
+        "resource metadata"
+      ],
+      "outputs": [
+        "public website"
+      ],
+      "dependencies": "Ruby/Jekyll",
+      "existing_schemas": [],
+      "existing_apis": [],
+      "existing_tools": [
+        "tools/generate_blog_circuits.py",
+        "tools/generate_blog_figures.py"
+      ],
+      "existing_ai_instructions": [],
+      "license": "CC-BY-4.0",
+      "maturity": "usable",
+      "duplicate_functionality": "Legacy device libraries and agent device/magnetics estimates require explicit boundaries; no automatic merge",
+      "old_branding": "none identified at repository title",
+      "migration_risks": "Stable bilingual URLs; Liquid includes; migration attribution"
+    },
+    {
+      "repository": "FulongLi/awesome-open-source-power-electronics",
+      "inspected_revision": "e5f9c4595ce982cc2dce6c5a08812cae070d0768",
+      "current_purpose": "Community external tool catalogue",
+      "target_purpose": "Retained catalogue with maintenance evidence",
+      "type": "catalogue",
+      "canonical_status": "canonical",
+      "inputs": [
+        "external project links"
+      ],
+      "outputs": [
+        "curated discovery list"
+      ],
+      "dependencies": "None",
+      "existing_schemas": [],
+      "existing_apis": [],
+      "existing_tools": [],
+      "existing_ai_instructions": [],
+      "license": "NOASSERTION",
+      "maturity": "curated",
+      "duplicate_functionality": "Legacy device libraries and agent device/magnetics estimates require explicit boundaries; no automatic merge",
+      "old_branding": "none identified at repository title",
+      "migration_risks": "Do not bulk import tools into Registry; missing licences are not open grants"
+    }
+  ],
+  "legacy": [
+    {
+      "repository": "FulongLi/transistordatabase",
+      "classification": "migration-source",
+      "license": "GPL-3.0",
+      "unique_value": "Existing upstream-compatible transistor package, tests and datasets",
+      "inspection": "GitHub metadata and top-level tree; deep migration review deferred",
+      "action": "retain; no deletion, merge, archive or rename performed"
+    },
+    {
+      "repository": "FulongLi/PowerElectronicsDeviceLibrary",
+      "classification": "migration-source",
+      "license": "GPL-3.0",
+      "unique_value": "Overlapping transistor package plus tests/import work; reconcile provenance before reuse",
+      "inspection": "GitHub metadata and top-level tree; deep migration review deferred",
+      "action": "retain; no deletion, merge, archive or rename performed"
+    },
+    {
+      "repository": "FulongLi/AIPE-Converter-Optimisation-Agent",
+      "classification": "research-experiment",
+      "license": "NOASSERTION",
+      "unique_value": "Models and optimiser code overlap agent optimisation; compare model fidelity",
+      "inspection": "GitHub metadata and top-level tree; deep migration review deferred",
+      "action": "retain; no deletion, merge, archive or rename performed"
+    },
+    {
+      "repository": "FulongLi/BuckConverterOptimisation",
+      "classification": "research-experiment",
+      "license": "NOASSERTION",
+      "unique_value": "ANN/polynomial loss scripts and source CSV; retain reproducibility",
+      "inspection": "GitHub metadata and top-level tree; deep migration review deferred",
+      "action": "retain; no deletion, merge, archive or rename performed"
+    },
+    {
+      "repository": "FulongLi/AIPE-MOSFET-ANN-Modelling",
+      "classification": "research-experiment",
+      "license": "MIT",
+      "unique_value": "ANN models, thermal spreadsheet and web app",
+      "inspection": "GitHub metadata and top-level tree; deep migration review deferred",
+      "action": "retain; no deletion, merge, archive or rename performed"
+    },
+    {
+      "repository": "FulongLi/AIPE-Magnetics-Agnet-Inductor-Design-Example",
+      "classification": "reference",
+      "license": "CC-BY-4.0",
+      "unique_value": "Documented design/images; spelling rename only with redirect plan",
+      "inspection": "GitHub metadata and top-level tree; deep migration review deferred",
+      "action": "retain; no deletion, merge, archive or rename performed"
+    },
+    {
+      "repository": "FulongLi/AIPS-EV-Charging-Planning",
+      "classification": "reference",
+      "license": "MIT",
+      "unique_value": "Planning software/configs/data/paper; separate power-systems domain, no AIPS migration",
+      "inspection": "GitHub metadata and top-level tree; deep migration review deferred",
+      "action": "retain; no deletion, merge, archive or rename performed"
+    },
+    {
+      "repository": "FulongLi/AIPS-Microgrid-EMS-Agent",
+      "classification": "research-experiment",
+      "license": "NOASSERTION",
+      "unique_value": "RuleBasedEMS implementation; preserve namespace and study unique control logic",
+      "inspection": "GitHub metadata and top-level tree; deep migration review deferred",
+      "action": "retain; no deletion, merge, archive or rename performed"
+    },
+    {
+      "repository": "FulongLi/IsolatedCoverters",
+      "classification": "reference",
+      "license": "CC-BY-4.0",
+      "unique_value": "LLC converter materials",
+      "inspection": "GitHub metadata and top-level tree; deep migration review deferred",
+      "action": "retain; no deletion, merge, archive or rename performed"
+    },
+    {
+      "repository": "FulongLi/NonisolatedCoverters",
+      "classification": "reference",
+      "license": "CC-BY-4.0",
+      "unique_value": "Buck and boost source material",
+      "inspection": "GitHub metadata and top-level tree; deep migration review deferred",
+      "action": "retain; no deletion, merge, archive or rename performed"
+    },
+    {
+      "repository": "FulongLi/HeatSinkOptimisation",
+      "classification": "research-experiment",
+      "license": "CC-BY-4.0",
+      "unique_value": "Geometry optimisation script/results",
+      "inspection": "GitHub metadata and top-level tree; deep migration review deferred",
+      "action": "retain; no deletion, merge, archive or rename performed"
+    },
+    {
+      "repository": "FulongLi/WirelessPowerTransferTestBench",
+      "classification": "reference",
+      "license": "CC-BY-4.0",
+      "unique_value": "Hardware context/images",
+      "inspection": "GitHub metadata and top-level tree; deep migration review deferred",
+      "action": "retain; no deletion, merge, archive or rename performed"
+    },
+    {
+      "repository": "FulongLi/DCMicrogridTestBench",
+      "classification": "reference",
+      "license": "CC-BY-4.0",
+      "unique_value": "PCB hardware files and testbench documentation",
+      "inspection": "GitHub metadata and top-level tree; deep migration review deferred",
+      "action": "retain; no deletion, merge, archive or rename performed"
+    },
+    {
+      "repository": "FulongLi/PCB-Rogowski-Coil",
+      "classification": "reference",
+      "license": "CC-BY-4.0",
+      "unique_value": "Sensor hardware/images",
+      "inspection": "GitHub metadata and top-level tree; deep migration review deferred",
+      "action": "retain; no deletion, merge, archive or rename performed"
+    },
+    {
+      "repository": "FulongLi/Magnetics-PCBCurrentTransformerTransducer",
+      "classification": "reference",
+      "license": "CC-BY-4.0",
+      "unique_value": "Transducer hardware/images",
+      "inspection": "GitHub metadata and top-level tree; deep migration review deferred",
+      "action": "retain; no deletion, merge, archive or rename performed"
+    },
+    {
+      "repository": "FulongLi/materialdatabase",
+      "classification": "migration-source",
+      "license": "GPL-3.0",
+      "unique_value": "Ferrite material data/package/tests; preserve GPL and dataset provenance",
+      "inspection": "GitHub metadata and top-level tree; deep migration review deferred",
+      "action": "retain; no deletion, merge, archive or rename performed"
+    },
+    {
+      "repository": "FulongLi/magnetchallenge",
+      "classification": "research-experiment",
+      "license": "MIT",
+      "unique_value": "Challenge models/data/reports; preserve benchmark boundaries",
+      "inspection": "GitHub metadata and top-level tree; deep migration review deferred",
+      "action": "retain; no deletion, merge, archive or rename performed"
+    }
+  ]
+}
